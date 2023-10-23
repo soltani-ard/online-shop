@@ -3,6 +3,7 @@ class TTexts {
 
   // -- Global Texts
   static const String appName = "Off Market";
+  static const String skip = "Skip";
 
   // -- OnBoarding Texts
   static const String onBoardingTitle1 = "Choose your product";
