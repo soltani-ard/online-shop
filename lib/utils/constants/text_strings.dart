@@ -28,4 +28,19 @@ class TTexts {
   static const String signIn = "Sign In";
   static const String createAccount = "Create Account";
   static const String orSignInWith = "Or Sign in with";
+
+  // -- SignUp
+  static const String signUpTitle = "Let's create your account";
+  static const String firstName = "First Name";
+  static const String lastName = "Last Name";
+  static const String userName = "Username";
+  static const String phoneNumber = "Phone Number";
+  static const String iAgreeTo = "I agree to";
+  static const String privacyPolicy = "Privacy Policy";
+  static const String and = "and";
+  static const String termOfUse = "Terms of use.";
+  static const String orSignUpWith = "Or Sign Up with";
+
+
+
 }
