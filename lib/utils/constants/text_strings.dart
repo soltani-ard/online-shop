@@ -2,7 +2,7 @@ class TTexts {
   TTexts._();
 
   // -- Global Texts
-  static const String appName = "Off Market";
+  static const String appName = "Online Shop";
   static const String skip = "Skip";
 
   // -- OnBoarding Texts
@@ -17,4 +17,15 @@ class TTexts {
   // -- Home
   static const String homeAppBarTitle = "Good day for shopping";
   static const String homeAppBarSubTitle = "Taimoor sikander";
+
+  // -- Login
+  static const String loginTitle = "Welcome back,";
+  static const String loginSubTitle = "Discover Limitless Choices and Unmatched Convenience";
+  static const String email = "Email";
+  static const String password = "Password";
+  static const String rememberMe = "Remember Me";
+  static const String forgetPassword = "Forget Password";
+  static const String signIn = "Sign In";
+  static const String createAccount = "Create Account";
+  static const String orSignInWith = "Or Sign in with";
 }
