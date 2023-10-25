@@ -14,4 +14,10 @@ class TImages {
   static const String google = "assets/logos/google_logo.png";
   static const String facebook = "assets/logos/facebook_logo.png";
 
+  // -- Animations
+  static const String deliveryEmail = "assets/images/animations/sammy-man-receives-a-mail.png";
+  static const String deliveredEmail = "assets/images/animations/sammy-success.png";
+
+
+
 }

@@ -41,6 +41,14 @@ class TTexts {
   static const String termOfUse = "Terms of use.";
   static const String orSignUpWith = "Or Sign Up with";
 
+  // -- Verify Email
+  static const String verifyEmail = "Verify Your Email Address!";
+  static const String verifyEmailSubTitle = "Congratulations! Your Account Awaits: Verify Your Email to Start Shopping and Experience a World of Unrivaled Deals and Personalized Offers.";
+  static const String tContinue = "Continue";
+  static const String resendEmail = "Resend Email";
+  static const String confirmEmail = "Your account successfully created!";
+  static const String confirmEmailSubTitle = "Welcome to Your Ultimate Shopping Destination: Your Account is Created. Unleash the Joy of Seamless Online Shopping!";
+
 
 
 }
