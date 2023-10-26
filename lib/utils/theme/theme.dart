@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:online_shop/utils/theme/custom_themes/appbar_theme.dart';
 import 'package:online_shop/utils/theme/custom_themes/bottom_sheet_theme.dart';
 import 'package:online_shop/utils/theme/custom_themes/checkbox_theme.dart';

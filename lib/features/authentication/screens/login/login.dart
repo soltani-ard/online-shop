@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:online_shop/common/styles/spacing_styles.dart';
 import 'package:online_shop/common/widgets/login_signup/form_divider.dart';
 import 'package:online_shop/common/widgets/login_signup/social_buttons.dart';
 import 'package:online_shop/features/authentication/screens/login/widgets/login_form.dart';
 import 'package:online_shop/features/authentication/screens/login/widgets/login_header.dart';
-import 'package:online_shop/utils/constants/colors.dart';
-import 'package:online_shop/utils/constants/image_strings.dart';
 import 'package:online_shop/utils/constants/sizes.dart';
 import 'package:online_shop/utils/constants/text_strings.dart';
 import 'package:online_shop/utils/helpers/helper_functions.dart';

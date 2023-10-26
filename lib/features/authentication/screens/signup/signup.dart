@@ -1,14 +1,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:iconsax/iconsax.dart';
-import 'package:online_shop/app.dart';
 import 'package:online_shop/common/widgets/login_signup/form_divider.dart';
 import 'package:online_shop/common/widgets/login_signup/social_buttons.dart';
-import 'package:online_shop/utils/constants/colors.dart';
 import 'package:online_shop/utils/constants/sizes.dart';
 import 'package:online_shop/utils/constants/text_strings.dart';
-import 'package:online_shop/utils/helpers/helper_functions.dart';
 
 import 'widgets/signup_form.dart';
 

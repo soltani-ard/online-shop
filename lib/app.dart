@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:online_shop/features/authentication/screens/login/login.dart';
 import 'package:online_shop/features/authentication/screens/onboarding/onboarding_screen.dart';
-import 'package:online_shop/features/authentication/screens/signup/signup.dart';
-import 'package:online_shop/features/splash_screen/screen/splash_screen.dart';
 import 'package:online_shop/utils/constants/text_strings.dart';
 import 'package:online_shop/utils/theme/theme.dart';
 

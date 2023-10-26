@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:online_shop/common/widgets/success_screen/success_screen.dart';
 import 'package:online_shop/features/authentication/screens/login/login.dart';
 import 'package:online_shop/utils/constants/image_strings.dart';

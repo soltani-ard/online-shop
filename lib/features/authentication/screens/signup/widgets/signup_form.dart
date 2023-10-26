@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:online_shop/features/authentication/screens/signup/verify_email.dart';
 import 'package:online_shop/features/authentication/screens/signup/widgets/terms_conditions_checkbox.dart';
-import 'package:online_shop/utils/constants/colors.dart';
 import 'package:online_shop/utils/constants/sizes.dart';
 import 'package:online_shop/utils/constants/text_strings.dart';
 import 'package:online_shop/utils/helpers/helper_functions.dart';
