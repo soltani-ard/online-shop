@@ -17,6 +17,7 @@ class TImages {
   // -- Animations
   static const String deliveryEmail = "assets/images/animations/sammy-man-receives-a-mail.png";
   static const String deliveredEmail = "assets/images/animations/sammy-success.png";
+  static const String resetPassword = "assets/images/animations/sammy-password.png";
 
 
 
