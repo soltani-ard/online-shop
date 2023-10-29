@@ -4,6 +4,7 @@ class TTexts {
   // -- Global Texts
   static const String appName = "Online Shop";
   static const String skip = "Skip";
+  static const String searchInStore = "Search in Store";
 
   // -- OnBoarding Texts
   static const String onBoardingTitle1 = "Choose your product";
