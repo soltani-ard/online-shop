@@ -16,7 +16,7 @@ class TTexts {
 
   // -- Home
   static const String homeAppBarTitle = "Good day for shopping";
-  static const String homeAppBarSubTitle = "Taimoor sikander";
+  static const String homeAppBarSubTitle = "Online Shop";
 
   // -- Login
   static const String loginTitle = "Welcome back,";
@@ -58,5 +58,7 @@ class TTexts {
   static const String resetPasswordTitle = "Password Reset Email Sent";
   static const String resetPasswordSubTitle = "Your Account Security is Our Priority. We've Sent You a  Secure Link to Safely Change Your Password and Keep Your Account Protected.";
   static const String done = "Done";
+
+
 
 }
