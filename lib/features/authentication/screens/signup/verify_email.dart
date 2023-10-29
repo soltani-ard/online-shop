@@ -33,7 +33,7 @@ class VerifyEmailScreen extends StatelessWidget {
                 width: THelperFunctions.screenWidth() * 0.6,
               ),
               const SizedBox(
-                height: TSizes.spaceBtwSelection,
+                height: TSizes.spaceBtwSections,
               ),
 
               ///  Title & SubTitle
@@ -59,7 +59,7 @@ class VerifyEmailScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               const SizedBox(
-                height: TSizes.spaceBtwSelection,
+                height: TSizes.spaceBtwSections,
               ),
 
               ///  Button

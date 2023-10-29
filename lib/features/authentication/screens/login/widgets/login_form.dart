@@ -13,7 +13,7 @@ class TLoginForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Form(child: Padding(
-      padding: const EdgeInsets.symmetric(vertical: TSizes.spaceBtwSelection),
+      padding: const EdgeInsets.symmetric(vertical: TSizes.spaceBtwSections),
       child: Column(
         children: [
           /// Email
@@ -53,7 +53,7 @@ class TLoginForm extends StatelessWidget {
             ],
           ),
 
-          const SizedBox(height: TSizes.spaceBtwSelection,),
+          const SizedBox(height: TSizes.spaceBtwSections,),
 
           /// Sign In Button
           SizedBox(width: double.infinity, child: ElevatedButton(onPressed: ()=> Get.to(()=> const NavigationMenu()), child: const Text(TTexts.signIn))),

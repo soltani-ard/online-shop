@@ -5,6 +5,7 @@ import 'package:online_shop/common/widgets/custom_shapes/containers/primary_head
 import 'package:online_shop/common/widgets/products/cart/cart_menu_icon.dart';
 import 'package:online_shop/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:online_shop/utils/constants/colors.dart';
+import 'package:online_shop/utils/constants/sizes.dart';
 import 'package:online_shop/utils/constants/text_strings.dart';
 
 class HomePageScreen extends StatelessWidget {
@@ -21,6 +22,7 @@ class HomePageScreen extends StatelessWidget {
             children: [
               /// -- Appbar
               THomeAppBar(),
+              SizedBox(height: TSizes.spaceBtwSections,),
 
               /// -- Searchbar
 
