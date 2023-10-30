@@ -5,6 +5,8 @@ class TTexts {
   static const String appName = "Online Shop";
   static const String skip = "Skip";
   static const String searchInStore = "Search in Store";
+  static const String viewAll = "View all";
+
 
   // -- OnBoarding Texts
   static const String onBoardingTitle1 = "Choose your product";
@@ -59,6 +61,10 @@ class TTexts {
   static const String resetPasswordTitle = "Password Reset Email Sent";
   static const String resetPasswordSubTitle = "Your Account Security is Our Priority. We've Sent You a  Secure Link to Safely Change Your Password and Keep Your Account Protected.";
   static const String done = "Done";
+
+  // -- Categories
+  static const String popularCategories = "Popular Categories";
+
 
 
 

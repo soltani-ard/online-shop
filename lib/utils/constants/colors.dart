@@ -23,6 +23,7 @@ class TColors {
   static const Color textPrimary = Color(0xFF333333);
   static const Color textSecondary = Color(0xFF6c757D);
   static const Color textWhite = Colors.white;
+  static const Color white = Colors.white;
 
   // Background Colors
   static const Color light = Color(0xFFf6f6f6);
