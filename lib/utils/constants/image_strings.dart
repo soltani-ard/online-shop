@@ -29,6 +29,13 @@ class TImages {
   static const String animalIcon = "assets/icons/categories/icons8-cute-frog-64.png";
   static const String cosmeticsIcon = "assets/icons/categories/icons8-cosmetics-64.png";
 
+  // -- Banners
+  static const String banner_1 = "assets/images/banners/banner_1.jpg";
+  static const String banner_2 = "assets/images/banners/banner_2.jpg";
+  static const String banner_3 = "assets/images/banners/banner_3.jpg";
+  static const String banner_4 = "assets/images/banners/banner_4.jpg";
+  static const String banner_5 = "assets/images/banners/banner_5.jpg";
+
 
 
 }
