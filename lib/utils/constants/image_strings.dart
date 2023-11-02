@@ -36,6 +36,40 @@ class TImages {
   static const String banner_4 = "assets/images/banners/banner_4.jpg";
   static const String banner_5 = "assets/images/banners/banner_5.jpg";
 
+  // -- Products
+  static const String pShoes1 = "assets/images/products/shoes1.png";
+  static const String pShoes2 = "assets/images/products/shoes2.png";
+  static const String pShoes3 = "assets/images/products/shoes3.png";
+  static const String pShoes4 = "assets/images/products/shoes4.png";
+  static const String pShoes5 = "assets/images/products/shoes5.png";
+  static const String pShoes6 = "assets/images/products/shoes6.png";
+  static const String pShoes7 = "assets/images/products/shoes7.png";
+  static const String pShoes8 = "assets/images/products/shoes8.png";
+  static const String pCoat1 = "assets/images/products/coat1.png";
+  static const String pCoat2 = "assets/images/products/coat2.png";
+  static const String pCoat3 = "assets/images/products/coat3.png";
+  static const String pCoat4 = "assets/images/products/coat4.png";
+  static const String pBall1 = "assets/images/products/ball1.png";
+  static const String pBall2 = "assets/images/products/ball2.png";
+  static const String pBall3 = "assets/images/products/ball3.png";
+  static const String pBall4 = "assets/images/products/ball4.png";
+  static const String pBall5 = "assets/images/products/ball5.png";
+  static const String pBall6 = "assets/images/products/ball6.png";
+  static const String pBall7 = "assets/images/products/ball7.png";
+  static const String pShort1 = "assets/images/products/short1.png";
+  static const String pShort2 = "assets/images/products/short2.png";
+  static const String pShort3 = "assets/images/products/short3.png";
+  static const String pShort4 = "assets/images/products/short4.png";
+  static const String pTShirt1 = "assets/images/products/tshirt1.png";
+  static const String pTShirt2 = "assets/images/products/tshirt2.png";
+  static const String pTShirt3 = "assets/images/products/tshirt3.png";
+  static const String pTShirt4 = "assets/images/products/tshirt4.png";
+  static const String pTShirt5 = "assets/images/products/tshirt5.png";
+  static const String pTShirt6 = "assets/images/products/tshirt6.png";
+  static const String pTShirt7 = "assets/images/products/tshirt7.png";
+  static const String pTShirt8 = "assets/images/products/tshirt8.png";
+
+
 
 
 }

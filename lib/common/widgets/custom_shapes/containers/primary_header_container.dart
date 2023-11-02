@@ -17,8 +17,8 @@ class TPrimaryHeaderContainer extends StatelessWidget {
         height: 400,
         child: Stack(
           children: [
-            Positioned(top: -150, right: -250, child: TCircularContainer(backgroundColor: TColors.textWhite.withOpacity(0.1),)),
-            Positioned(top: 100, right: -300, child: TCircularContainer(backgroundColor: TColors.textWhite.withOpacity(0.1),)),
+            Positioned(top: -150, right: -250, child: TRoundedContainer(backgroundColor: TColors.textWhite.withOpacity(0.1),)),
+            Positioned(top: 100, right: -300, child: TRoundedContainer(backgroundColor: TColors.textWhite.withOpacity(0.1),)),
             child,
           ],
         ),

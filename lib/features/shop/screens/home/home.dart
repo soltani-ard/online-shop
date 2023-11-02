@@ -4,6 +4,8 @@ import 'package:online_shop/common/widgets/custom_shapes/containers/circular_con
 import 'package:online_shop/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:online_shop/common/widgets/custom_shapes/containers/search_container.dart';
 import 'package:online_shop/common/widgets/images/rounded_image.dart';
+import 'package:online_shop/common/widgets/layouts/grid_layout.dart';
+import 'package:online_shop/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:online_shop/common/widgets/text/section_heading.dart';
 import 'package:online_shop/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:online_shop/features/shop/screens/home/widgets/home_categories.dart';
@@ -73,6 +75,11 @@ class HomePageScreen extends StatelessWidget {
               TImages.banner_4,
               TImages.banner_5,
             ]),
+          ),
+
+          TGridLayout(
+            itemCount: 4,
+            itemBuilder: (_, index) => const TProductVertical(),
           )
         ],
       ),
