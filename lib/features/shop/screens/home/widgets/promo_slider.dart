@@ -5,7 +5,6 @@ import 'package:online_shop/common/widgets/custom_shapes/containers/circular_con
 import 'package:online_shop/common/widgets/images/rounded_image.dart';
 import 'package:online_shop/features/shop/controllers/home_controller.dart';
 import 'package:online_shop/utils/constants/colors.dart';
-import 'package:online_shop/utils/constants/image_strings.dart';
 import 'package:online_shop/utils/constants/sizes.dart';
 
 class TPromoSlider extends StatelessWidget {

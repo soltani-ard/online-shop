@@ -1,9 +1,6 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:online_shop/common/widgets/custom_shapes/containers/circular_container.dart';
 import 'package:online_shop/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:online_shop/common/widgets/custom_shapes/containers/search_container.dart';
-import 'package:online_shop/common/widgets/images/rounded_image.dart';
 import 'package:online_shop/common/widgets/layouts/grid_layout.dart';
 import 'package:online_shop/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:online_shop/common/widgets/text/section_heading.dart';
@@ -16,7 +13,14 @@ import 'package:online_shop/utils/constants/sizes.dart';
 import 'package:online_shop/utils/constants/text_strings.dart';
 
 class HomePageScreen extends StatelessWidget {
-  const HomePageScreen({super.key});
+  HomePageScreen({super.key});
+
+  late List products = [
+    {'img': TImages.pShoes1, 'title': "FILA Shoes for Men", "price": 35.5, "brand": "Fila", "discount": 5, "isFav": false},
+    {'img': TImages.pShoes2, 'title': "adidas Shoes for Women", "price": 42.5, "brand": "Fila", "discount": 10, "isFav": true},
+    {'img': TImages.pShoes3, 'title': "airmax Shoes for Women", "price": 20.5, "brand": "AirMax", "discount": 30, "isFav": false},
+    {'img': TImages.pShoes5, 'title': "salomon Shoes for Men", "price": 28.5, "brand": "Salomon", "discount": 12, "isFav": true},
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +62,14 @@ class HomePageScreen extends StatelessWidget {
                     ),
 
                     /// -- Categories
-                    THomeCategories(),
+                    THomeCategories(tmp: [
+                      {'image': "assets/icons/categories/icons8-sport-64.png", 'title': "Sport"},
+                      {'image': "assets/icons/categories/icons8-jersey-64.png", 'title': "T-Shirt"},
+                      {'image': "assets/icons/categories/icons8-shoes-64.png", 'title': "Shoes"},
+                      {'image': "assets/icons/categories/icons8-toy-64.png", 'title': "Toy"},
+                      {'image': "assets/icons/categories/icons8-jewel-64.png", 'title': "Jewel"},
+                      {'image': "assets/icons/categories/icons8-cosmetics-64.png", 'title': "Cosmetics"},
+                    ],),
                   ],
                 ),
               ),
@@ -79,7 +90,7 @@ class HomePageScreen extends StatelessWidget {
 
           TGridLayout(
             itemCount: 4,
-            itemBuilder: (_, index) => const TProductVertical(),
+            itemBuilder: (_, index) => TProductVertical(product: products[index]),
           )
         ],
       ),

@@ -7,12 +7,13 @@ import 'package:online_shop/common/widgets/images/rounded_image.dart';
 import 'package:online_shop/common/widgets/text/product_price.dart';
 import 'package:online_shop/common/widgets/text/product_title.dart';
 import 'package:online_shop/utils/constants/colors.dart';
-import 'package:online_shop/utils/constants/image_strings.dart';
 import 'package:online_shop/utils/constants/sizes.dart';
 import 'package:online_shop/utils/helpers/helper_functions.dart';
 
 class TProductVertical extends StatelessWidget {
-  const TProductVertical({super.key});
+  const TProductVertical({super.key, required this.product});
+
+  final Map product;
 
   @override
   Widget build(BuildContext context) {
@@ -37,8 +38,8 @@ class TProductVertical extends StatelessWidget {
               child: Stack(
                 children: [
                   /// -- Thumbnail Image
-                  const TRoundedImage(
-                    imgUrl: TImages.pShoes3,
+                  TRoundedImage(
+                    imgUrl: product['img'],
                     applyImageRadius: true,
                   ),
 
@@ -51,7 +52,7 @@ class TProductVertical extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           horizontal: TSizes.sm, vertical: TSizes.xs),
                       child: Text(
-                        "25%",
+                        "${product['discount']}%",
                         style: Theme.of(context)
                             .textTheme
                             .labelLarge!
@@ -61,12 +62,12 @@ class TProductVertical extends StatelessWidget {
                   ),
 
                   /// -- Fav Button
-                  const Positioned(
+                  Positioned(
                       top: 0,
                       right: 0,
                       child: TCircularIcon(
                         icon: Iconsax.heart5,
-                        color: Colors.red,
+                        color: product['isFav'] ? Colors.red : Colors.grey,
                       ))
                 ],
               ),
@@ -81,8 +82,8 @@ class TProductVertical extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const TProductTitle(
-                    title: "Nike Air Shoes",
+                  TProductTitle(
+                    title: product['title'],
                     smallSize: true,
                   ),
                   const SizedBox(
@@ -91,7 +92,7 @@ class TProductVertical extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        "Nike",
+                        product['brand'],
                         style: Theme.of(context).textTheme.labelMedium,
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
@@ -107,7 +108,7 @@ class TProductVertical extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       /// Price
-                      const TProductPrice(price: "35.5"),
+                      TProductPrice(price: product['price'].toString()),
                       Container(
                         decoration: const BoxDecoration(
                           color: Colors.green,

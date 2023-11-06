@@ -1,11 +1,18 @@
+
 import 'package:flutter/material.dart';
 import 'package:online_shop/common/widgets/image_text/vertical_image_text.dart';
-import 'package:online_shop/utils/constants/image_strings.dart';
 
 class THomeCategories extends StatelessWidget {
   const THomeCategories({
-    super.key,
+    super.key, this.tmp,
+
   });
+
+   final List? tmp;
+
+
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +22,7 @@ class THomeCategories extends StatelessWidget {
         itemCount: 6,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
-          return const TVerticalImageText(image: TImages.jerseyIcon, title: "T-shirt");
+          return TVerticalImageText(image: tmp![index]['image'], title: tmp![index]['title']);
 
         },),
     );
