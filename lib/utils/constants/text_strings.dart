@@ -6,6 +6,7 @@ class TTexts {
   static const String skip = "Skip";
   static const String searchInStore = "Search in Store";
   static const String viewAll = "View all";
+  static const String store = "Store";
 
 
   // -- OnBoarding Texts
@@ -65,6 +66,8 @@ class TTexts {
   // -- Categories
   static const String popularCategories = "Popular Categories";
 
+  // -- Store
+  static const String featuredBrands = "Featured Brands";
 
 
 

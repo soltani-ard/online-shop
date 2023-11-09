@@ -36,6 +36,13 @@ class TImages {
   static const String banner_4 = "assets/images/banners/banner_4.jpg";
   static const String banner_5 = "assets/images/banners/banner_5.jpg";
 
+  // -- Brands
+  static const String adidas = "assets/logos/adidas.png";
+  static const String chanel = "assets/logos/chanel.png";
+  static const String fila = "assets/logos/fila.png";
+  static const String nike = "assets/logos/nike.png";
+  static const String puma = "assets/logos/puma.png";
+
   // -- Products
   static const String pShoes1 = "assets/images/products/shoes1.png";
   static const String pShoes2 = "assets/images/products/shoes2.png";

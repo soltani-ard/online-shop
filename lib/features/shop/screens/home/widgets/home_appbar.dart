@@ -33,8 +33,8 @@ class THomeAppBar extends StatelessWidget {
         TCartCounterIcon(
             count: "2",
             iconColor: TColors.textWhite,
-            bgBadge: TColors.black,
-            fgBadge: TColors.textWhite,
+            bgBadge: Colors.redAccent,
+            fgBadge: Colors.white,
             onPressed: () {})
       ],
     );

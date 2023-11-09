@@ -88,10 +88,17 @@ class HomePageScreen extends StatelessWidget {
             ]),
           ),
 
-          TGridLayout(
-            itemCount: 4,
-            itemBuilder: (_, index) => TProductVertical(product: products[index]),
-          )
+          TSectionHeading(title: 'Popular Products', onPressed: (){},),
+          const SizedBox(height: TSizes.spaceBtwItems,),
+
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: TSizes.sm),
+            child: TGridLayout(
+              itemCount: 4,
+              itemBuilder: (_, index) => TProductVertical(product: products[index]),
+            ),
+          ),
+
         ],
       ),
     ));

@@ -82,6 +82,8 @@ class TProductVertical extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+
+                  /// -- Title
                   TProductTitle(
                     title: product['title'],
                     smallSize: true,
@@ -89,6 +91,8 @@ class TProductVertical extends StatelessWidget {
                   const SizedBox(
                     height: TSizes.spaceBtwItems / 2,
                   ),
+
+                  /// -- Brand
                   Row(
                     children: [
                       Text(
@@ -104,32 +108,39 @@ class TProductVertical extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      /// Price
-                      TProductPrice(price: product['price'].toString()),
-                      Container(
-                        decoration: const BoxDecoration(
-                          color: Colors.green,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(TSizes.cardRadiusMd),
-                            bottomRight:
-                                Radius.circular(TSizes.productImageRadius),
-                          ),
-                        ),
-                        child: const SizedBox(
-                            width: TSizes.iconLg,
-                            height: TSizes.iconLg,
-                            child: Icon(
-                              Iconsax.add,
-                              color: TColors.white,
-                            )),
-                      ),
-                    ],
-                  )
+
                 ],
               ),
+            ),
+            const Spacer(),
+
+            /// -- Price Row
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                /// Price
+                Padding(
+                  padding: const EdgeInsets.only(left: TSizes.sm),
+                  child: TProductPrice(price: product['price'].toString()),
+                ),
+                Container(
+                  decoration: const BoxDecoration(
+                    color: Colors.green,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(TSizes.cardRadiusMd),
+                      bottomRight:
+                      Radius.circular(TSizes.productImageRadius),
+                    ),
+                  ),
+                  child: const SizedBox(
+                      width: TSizes.iconLg,
+                      height: TSizes.iconLg,
+                      child: Icon(
+                        Iconsax.add,
+                        color: TColors.white,
+                      )),
+                ),
+              ],
             ),
           ],
         ),

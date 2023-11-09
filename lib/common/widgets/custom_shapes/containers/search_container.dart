@@ -7,13 +7,20 @@ import 'package:online_shop/utils/helpers/helper_functions.dart';
 
 class TSearchContainer extends StatelessWidget {
   const TSearchContainer({
-    super.key, required this.text, this.icon = Iconsax.search_normal,  this.showBackground = true,  this.showBorder = true, required this.onTap,
+    super.key,
+    required this.text,
+    this.icon = Iconsax.search_normal,
+    this.showBackground = true,
+    this.showBorder = true,
+    required this.onTap,
+    this.padding = const EdgeInsets.symmetric(horizontal: TSizes.defaultSpace),
   });
 
   final String text;
   final IconData icon;
   final bool showBackground, showBorder;
   final VoidCallback onTap;
+  final EdgeInsets padding;
 
   @override
   Widget build(BuildContext context) {
@@ -21,24 +28,33 @@ class TSearchContainer extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: TSizes.defaultSpace),
+        padding: padding,
         child: Container(
           width: TDeviceUtils.getScreenWidth(context),
           padding: const EdgeInsets.all(TSizes.md),
           decoration: BoxDecoration(
-            color: showBackground ? (isDark ? TColors.dark : TColors.light) : (Colors.transparent),
+            color: showBackground
+                ? (isDark ? TColors.dark : TColors.light)
+                : (Colors.transparent),
             borderRadius: BorderRadius.circular(TSizes.borderRadiusLg),
             border: showBorder ? Border.all(color: TColors.grey) : null,
           ),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Icon(icon, color: TColors.darkerGrey,),
-              const SizedBox(width: TSizes.spaceBtwItems,),
-              Text(text, style: Theme.of(context).textTheme.bodySmall,),
+              Icon(
+                icon,
+                color: TColors.darkerGrey,
+              ),
+              const SizedBox(
+                width: TSizes.spaceBtwItems,
+              ),
+              Text(
+                text,
+                style: Theme.of(context).textTheme.bodySmall,
+              ),
             ],
           ),
-
         ),
       ),
     );
