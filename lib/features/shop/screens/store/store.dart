@@ -6,6 +6,7 @@ import 'package:online_shop/common/widgets/layouts/grid_layout.dart';
 import 'package:online_shop/common/widgets/products/cart/cart_menu_icon.dart';
 import 'package:online_shop/common/widgets/text/section_heading.dart';
 import 'package:online_shop/utils/constants/colors.dart';
+import 'package:online_shop/utils/constants/enums.dart';
 import 'package:online_shop/utils/constants/image_strings.dart';
 import 'package:online_shop/utils/constants/sizes.dart';
 import 'package:online_shop/utils/constants/text_strings.dart';
@@ -62,12 +63,13 @@ class StoreScreen extends StatelessWidget {
                     TSectionHeading(title: TTexts.featuredBrands, onPressed: (){},),
                     const SizedBox(height: TSizes.spaceBtwItems / 1.5,),
                     
-                    TGridLayout(itemCount: 4, mainAxisExtent: 80, itemBuilder: (_, index) {
+                    TGridLayout(itemCount: 4, mainAxisExtent: 85, itemBuilder: (_, index) {
 
                       return TBrandCard(
                         image: brands.toList()[index]['image'],
                         title:brands.toList()[index]['title'],
                         productNumber: brands.toList()[index]['productNumber'],
+                        brandTextSize: TextSizes.medium,
                         onTap: () {},
                       );
                     }),

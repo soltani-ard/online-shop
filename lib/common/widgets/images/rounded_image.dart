@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:online_shop/utils/constants/colors.dart';
 import 'package:online_shop/utils/constants/sizes.dart';
+import 'package:online_shop/utils/helpers/helper_functions.dart';
 
 class TRoundedImage extends StatelessWidget {
   const TRoundedImage({
@@ -31,6 +33,7 @@ class TRoundedImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isDark = THelperFunctions.isDarkMode(context);
     return GestureDetector(
       onTap: onPressed,
       child: Container(
@@ -47,13 +50,22 @@ class TRoundedImage extends StatelessWidget {
                 ? BorderRadius.circular(borderRadius)
                 : BorderRadius.zero,
             child: Center(
-              child: Image(
-                fit: fit,
-                alignment: Alignment.center,
-                image: isNetworkImage
-                    ? NetworkImage(imgUrl)
-                    : AssetImage(imgUrl) as ImageProvider,
-              ),
+              child: imgUrl.contains(".svg")
+                  ? SvgPicture.asset(
+                      imgUrl,
+                      alignment: Alignment.center,
+                      width: 56,
+                      height: 56,
+                      colorFilter:
+                      ColorFilter.mode(isDark ? Colors.white : Colors.black, BlendMode.srcIn),
+                    )
+                  : Image(
+                      fit: fit,
+                      alignment: Alignment.center,
+                      image: isNetworkImage
+                          ? NetworkImage(imgUrl)
+                          : AssetImage(imgUrl) as ImageProvider,
+                    ),
             )),
       ),
     );

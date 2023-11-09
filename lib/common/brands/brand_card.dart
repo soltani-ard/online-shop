@@ -34,8 +34,8 @@ class TBrandCard extends StatelessWidget {
               child: TRoundedImage(
                 isNetworkImage: false,
                 imgUrl: image,
-                width: 56,
-                height: 56,
+                width: 64,
+                height: 64,
                 backgroundColor: Colors.transparent,
               ),
             ),

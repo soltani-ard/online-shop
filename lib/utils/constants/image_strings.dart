@@ -37,11 +37,11 @@ class TImages {
   static const String banner_5 = "assets/images/banners/banner_5.jpg";
 
   // -- Brands
-  static const String adidas = "assets/logos/adidas.png";
-  static const String chanel = "assets/logos/chanel.png";
-  static const String fila = "assets/logos/fila.png";
-  static const String nike = "assets/logos/nike.png";
-  static const String puma = "assets/logos/puma.png";
+  static const String adidas = "assets/logos/adidas.svg";
+  static const String chanel = "assets/logos/chanel.svg";
+  static const String fila = "assets/logos/fila.svg";
+  static const String nike = "assets/logos/nike.svg";
+  static const String puma = "assets/logos/puma.svg";
 
   // -- Products
   static const String pShoes1 = "assets/images/products/shoes1.png";
