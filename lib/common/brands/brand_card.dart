@@ -12,12 +12,14 @@ class TBrandCard extends StatelessWidget {
       required this.image,
       this.productNumber = 0,
       this.brandTextSize = TextSizes.small,
-      this.onTap
+      this.showBorder = true,
+      this.onTap,
       });
 
   final String title, image;
   final int? productNumber;
   final TextSizes brandTextSize;
+  final bool showBorder;
   final VoidCallback? onTap;
 
   @override
@@ -26,7 +28,7 @@ class TBrandCard extends StatelessWidget {
       onTap: onTap,
       child: TRoundedContainer(
         padding: const EdgeInsets.all(TSizes.defaultSpace),
-        showBorder: true,
+        showBorder: showBorder,
         backgroundColor: Colors.transparent,
         child: Row(
           children: [
