@@ -7,6 +7,7 @@ class TTexts {
   static const String searchInStore = "Search in Store";
   static const String viewAll = "View all";
   static const String store = "Store";
+  static const String wishlist = "Wishlist";
 
 
   // -- OnBoarding Texts
