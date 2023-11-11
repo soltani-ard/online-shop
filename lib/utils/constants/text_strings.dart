@@ -31,6 +31,7 @@ class TTexts {
   static const String rememberMe = "Remember Me";
   static const String forgetPassword = "Forget Password";
   static const String signIn = "Sign In";
+  static const String logout = "Logout";
   static const String createAccount = "Create Account";
   static const String orSignInWith = "Or Sign in with";
 
@@ -70,6 +71,31 @@ class TTexts {
   // -- Store
   static const String featuredBrands = "Featured Brands";
 
-
+  // -- Settings
+  static const String account = "Account";
+  static const String accountSettings = "Account Settings";
+  static const String myAddresses = "My Addresses";
+  static const String myAddressesSubTitle = "Set shopping delivery address.";
+  static const String myCart = "My Cart";
+  static const String myCartSubTitle = "Add, remove products and move to checkout.";
+  static const String myOrders = "My Orders";
+  static const String myOrdersSubTitle = "In-progress and Completed Orders.";
+  static const String bankAccount = "Bank Account";
+  static const String bankAccountSubTitle = "Withdraw balance to registered bank account.";
+  static const String myCoupons = "My Coupons";
+  static const String myCouponsSubTitle = "List of all the discount coupons.";
+  static const String notification = "Notification";
+  static const String notificationSubTitle = "Set any kind of notification message.";
+  static const String accountPrivacy = "Account Privacy";
+  static const String accountPrivacySubTitle = "Manage data usage and connected account.";
+  static const String appSettings = "App Settings";
+  static const String loadData = "Load Data";
+  static const String loadDataSubTitle = "Upload Data to your Cloud Firebase.";
+  static const String geolocation = "Geolocation";
+  static const String geolocationSubTitle = "Set recommendation based on location.";
+  static const String safeMode = "Safe Mode";
+  static const String safeModeSubTitle = "Search result is safe for all ages.";
+  static const String hdImageQuality = "HD Image Quality";
+  static const String hdImageQualitySubTitle = "Set image quality to be seen.";
 
 }

@@ -83,6 +83,7 @@ flutter:
     - assets/images/products/
     - assets/images/animations/
     - assets/images/banners/
+    - assets/images/user/
     - assets/logos/
     - assets/icons/categories/
   #   - images/a_dot_ham.jpeg

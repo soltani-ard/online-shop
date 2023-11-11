@@ -76,6 +76,8 @@ class TImages {
   static const String pTShirt7 = "assets/images/products/tshirt7.png";
   static const String pTShirt8 = "assets/images/products/tshirt8.png";
 
+  // -- user
+  static const String user = "assets/images/user/user.png";
 
 
 

@@ -73,6 +73,7 @@ class HomePageScreen extends StatelessWidget {
                   ],
                 ),
               ),
+              const SizedBox(height: TSizes.spaceBtwSections,),
             ],
           )),
 
