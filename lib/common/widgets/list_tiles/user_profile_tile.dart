@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:online_shop/common/widgets/images/rounded_image.dart';
+import 'package:online_shop/features/personalization/profile/profile.dart';
 import 'package:online_shop/utils/constants/colors.dart';
 import 'package:online_shop/utils/constants/image_strings.dart';
 
@@ -31,7 +33,7 @@ class TUserProfileTile extends StatelessWidget {
             Theme.of(context).textTheme.bodyMedium!.apply(color: TColors.white),
       ),
       trailing: IconButton(
-          onPressed: () {},
+          onPressed: () => Get.to(()=> const ProfileScreen()),
           icon: const Icon(
             Iconsax.edit,
             color: TColors.white,

@@ -98,4 +98,15 @@ class TTexts {
   static const String hdImageQuality = "HD Image Quality";
   static const String hdImageQualitySubTitle = "Set image quality to be seen.";
 
+  // -- Profile
+  static const String profile = "Profile";
+  static const String changeProfilePicture = "Change Profile Picture";
+  static const String profileInformation = "Profile Information";
+  static const String personalInformation = "Personal Information";
+  static const String name = "Name";
+  static const String gender = "Gender";
+  static const String dateOfBrith = "Date Of Brith";
+  static const String userId = "User ID";
+  static const String closeAccount = "Close Account";
+
 }

@@ -61,6 +61,8 @@ class TRoundedImage extends StatelessWidget {
                     )
                   : Image(
                       fit: fit,
+                      width: width,
+                      height: height,
                       alignment: Alignment.center,
                       image: isNetworkImage
                           ? NetworkImage(imgUrl)
