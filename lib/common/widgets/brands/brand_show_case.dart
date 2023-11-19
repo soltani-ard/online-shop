@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:online_shop/common/brands/brand_card.dart';
+import 'package:online_shop/common/widgets/brands/brand_card.dart';
 import 'package:online_shop/common/widgets/custom_shapes/containers/circular_container.dart';
 import 'package:online_shop/utils/constants/colors.dart';
 import 'package:online_shop/utils/constants/enums.dart';

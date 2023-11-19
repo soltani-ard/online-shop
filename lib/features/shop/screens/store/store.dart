@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:online_shop/common/brands/brand_card.dart';
 import 'package:online_shop/common/widgets/appbar/appbar.dart';
 import 'package:online_shop/common/widgets/appbar/tabbar.dart';
+import 'package:online_shop/common/widgets/brands/brand_card.dart';
 import 'package:online_shop/common/widgets/custom_shapes/containers/search_container.dart';
 import 'package:online_shop/common/widgets/layouts/grid_layout.dart';
 import 'package:online_shop/common/widgets/products/cart/cart_menu_icon.dart';

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:online_shop/common/styles/shadows.dart';
 import 'package:online_shop/common/widgets/custom_shapes/containers/circular_container.dart';
@@ -6,6 +7,7 @@ import 'package:online_shop/common/widgets/icons/circular_icon.dart';
 import 'package:online_shop/common/widgets/images/rounded_image.dart';
 import 'package:online_shop/common/widgets/text/product_price.dart';
 import 'package:online_shop/common/widgets/text/product_title.dart';
+import 'package:online_shop/features/shop/screens/product_details/product_details.dart';
 import 'package:online_shop/utils/constants/colors.dart';
 import 'package:online_shop/utils/constants/sizes.dart';
 import 'package:online_shop/utils/helpers/helper_functions.dart';
@@ -19,7 +21,7 @@ class TProductVertical extends StatelessWidget {
   Widget build(BuildContext context) {
     bool isDark = THelperFunctions.isDarkMode(context);
     return GestureDetector(
-      onTap: () {},
+      onTap: () => Get.to(() => ProductDetailScreen(product: product,)),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),
@@ -82,7 +84,6 @@ class TProductVertical extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
                   /// -- Title
                   TProductTitle(
                     title: product['title'],
@@ -108,7 +109,6 @@ class TProductVertical extends StatelessWidget {
                       ),
                     ],
                   ),
-
                 ],
               ),
             ),
@@ -128,8 +128,7 @@ class TProductVertical extends StatelessWidget {
                     color: Colors.green,
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(TSizes.cardRadiusMd),
-                      bottomRight:
-                      Radius.circular(TSizes.productImageRadius),
+                      bottomRight: Radius.circular(TSizes.productImageRadius),
                     ),
                   ),
                   child: const SizedBox(
