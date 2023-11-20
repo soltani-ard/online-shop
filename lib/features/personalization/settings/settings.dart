@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:online_shop/common/widgets/appbar/appbar.dart';
 import 'package:online_shop/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:online_shop/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:online_shop/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:online_shop/common/widgets/text/section_heading.dart';
+import 'package:online_shop/features/personalization/address/address.dart';
 import 'package:online_shop/utils/constants/colors.dart';
 import 'package:online_shop/utils/constants/sizes.dart';
 import 'package:online_shop/utils/constants/text_strings.dart';
@@ -59,7 +61,7 @@ class SettingsScreen extends StatelessWidget {
                       icon: Iconsax.safe_home,
                       title: TTexts.myAddresses,
                       subTitle: TTexts.myAddressesSubTitle,
-                      onTap: () {}),
+                      onTap: () => Get.to(() => const Addresses())),
                   TSettingsMenuTiles(
                       icon: Iconsax.shopping_cart,
                       title: TTexts.myCart,

@@ -24,7 +24,7 @@ class TUserReviewCard extends StatelessWidget {
                   backgroundImage: AssetImage(TImages.userB),
                 ),
                 const SizedBox(
-                  height: TSizes.spaceBtwItems,
+                  width: TSizes.spaceBtwItems,
                 ),
                 Text(
                   'John Doe',
