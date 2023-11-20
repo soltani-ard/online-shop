@@ -78,6 +78,10 @@ class TImages {
 
   // -- user
   static const String user = "assets/images/user/user.png";
+  static const String userA = "assets/images/user/user_r1.jpg";
+  static const String userB = "assets/images/user/user_r2.jpg";
+  static const String userC = "assets/images/user/user_r3.jpg";
+  static const String userD = "assets/images/user/user_r4.jpg";
 
 
 
