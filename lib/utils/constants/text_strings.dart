@@ -127,5 +127,8 @@ class TTexts {
   static const String addresses = "Addresses";
   static const String addNewAddresses = "Add New Addresses";
 
+  // -- Address
+  static const String cart = "Cart";
+
 
 }
