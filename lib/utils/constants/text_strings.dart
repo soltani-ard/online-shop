@@ -127,8 +127,18 @@ class TTexts {
   static const String addresses = "Addresses";
   static const String addNewAddresses = "Add New Addresses";
 
-  // -- Address
+  // -- Cart
   static const String cart = "Cart";
+  static const String orderReview = "Order Review";
+  static const String couponCodeDescription = "Have a promo code? Enter here";
+  static const String apply = "Apply";
+  static const String subtotal = "Subtotal";
+  static const String shippingFee = "Shipping Fee";
+  static const String taxFee = "Tax Fee";
+  static const String orderTotal = "Order Total";
+  static const String paymentMethod = "Payment Method";
+  static const String shippingAddress = "Shipping Address";
+  static const String change = "Change";
 
 
 }

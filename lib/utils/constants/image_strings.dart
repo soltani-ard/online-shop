@@ -83,6 +83,10 @@ class TImages {
   static const String userC = "assets/images/user/user_r3.jpg";
   static const String userD = "assets/images/user/user_r4.jpg";
 
+  // --
+  static const String paymentSuccess = "assets/images/animations/paying-by-card.gif";
+
+
 
 
 }

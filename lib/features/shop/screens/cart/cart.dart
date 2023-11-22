@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:online_shop/common/widgets/appbar/appbar.dart';
-import 'package:online_shop/common/widgets/products/cart/cart_item.dart';
-import 'package:online_shop/common/widgets/products/cart/quantity_with_add_and_remove_button.dart';
-import 'package:online_shop/common/widgets/text/product_price.dart';
+import 'package:online_shop/features/shop/screens/cart/widgets/cart_items.dart';
+import 'package:online_shop/features/shop/screens/checkout/checkout.dart';
 import 'package:online_shop/utils/constants/sizes.dart';
 import 'package:online_shop/utils/constants/text_strings.dart';
 
@@ -22,41 +22,13 @@ class CartScreen extends StatelessWidget {
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(TSizes.defaultSpace),
         child: ElevatedButton(
-          onPressed: () {},
-          child: const Text('${TTexts.checkout} \$2,420'),
+          onPressed: () => Get.to(() => const CheckoutScreen()),
+          child: const Text('${TTexts.checkout} \$720'),
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(TSizes.defaultSpace),
-        child: ListView.separated(
-          shrinkWrap: true,
-          itemCount: 4,
-          separatorBuilder: (_, __) => const SizedBox(
-            height: TSizes.spaceBtwSections,
-          ),
-          itemBuilder: (_, index) => const Column(
-            children: [
-              TCartItem(),
-              SizedBox(
-                height: TSizes.spaceBtwItems,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    children: [
-                      SizedBox(
-                        width: 70,
-                      ),
-                      TProductQuantityWithAddAndRemoveButton(),
-                    ],
-                  ),
-                  TProductPrice(price: '360')
-                ],
-              ),
-            ],
-          ),
-        ),
+      body: const Padding(
+        padding: EdgeInsets.all(TSizes.defaultSpace),
+        child: TCartItems(),
       ),
     );
   }
