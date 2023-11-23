@@ -7,6 +7,8 @@ import 'package:online_shop/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:online_shop/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:online_shop/common/widgets/text/section_heading.dart';
 import 'package:online_shop/features/personalization/address/address.dart';
+import 'package:online_shop/features/shop/screens/cart/cart.dart';
+import 'package:online_shop/features/shop/screens/order/order.dart';
 import 'package:online_shop/utils/constants/colors.dart';
 import 'package:online_shop/utils/constants/sizes.dart';
 import 'package:online_shop/utils/constants/text_strings.dart';
@@ -66,12 +68,12 @@ class SettingsScreen extends StatelessWidget {
                       icon: Iconsax.shopping_cart,
                       title: TTexts.myCart,
                       subTitle: TTexts.myCartSubTitle,
-                      onTap: () {}),
+                      onTap: () => Get.to(() => const CartScreen())),
                   TSettingsMenuTiles(
                       icon: Iconsax.bag_tick,
                       title: TTexts.myOrders,
                       subTitle: TTexts.myOrdersSubTitle,
-                      onTap: () {}),
+                      onTap: () => Get.to(() => const OrderScreen())),
                   TSettingsMenuTiles(
                       icon: Iconsax.bank,
                       title: TTexts.bankAccount,

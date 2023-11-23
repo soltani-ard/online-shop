@@ -140,5 +140,7 @@ class TTexts {
   static const String shippingAddress = "Shipping Address";
   static const String change = "Change";
 
+  // -- Orders
+
 
 }
