@@ -21,7 +21,9 @@ class TProductVertical extends StatelessWidget {
   Widget build(BuildContext context) {
     bool isDark = THelperFunctions.isDarkMode(context);
     return GestureDetector(
-      onTap: () => Get.to(() => ProductDetailScreen(product: product,)),
+      onTap: () => Get.to(() => ProductDetailScreen(
+            product: product,
+          )),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),
