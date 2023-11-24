@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:online_shop/common/widgets/appbar/appbar.dart';
+import 'package:online_shop/common/widgets/brands/brand_card.dart';
 import 'package:online_shop/common/widgets/products/sortable/sortable_products.dart';
 import 'package:online_shop/utils/constants/image_strings.dart';
 import 'package:online_shop/utils/constants/sizes.dart';
-import 'package:online_shop/utils/constants/text_strings.dart';
 
-class AllProductsScreen extends StatelessWidget {
-  AllProductsScreen({super.key});
+class TBrandProducts extends StatelessWidget {
+  TBrandProducts({super.key, required this.brand});
 
+  final Map brand;
   late List allProducts = [
     {
       'img': TImages.pShort3,
@@ -254,17 +255,44 @@ class AllProductsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const TAppBar(
-        title: Text(TTexts.popularProducts),
+      appBar: TAppBar(
+        title: Text(brand['title']),
         showBackArrow: true,
       ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(TSizes.defaultSpace),
-          child: TSortableProducts(allProducts: allProducts),
+          child: Column(
+            children: [
+              /// Brand Details
+              TBrandCard(
+                title: brand['title'],
+                image: brand['image'],
+                productNumber: brand['productNumber'],
+              ),
+              const SizedBox(
+                height: TSizes.spaceBtwSections,
+              ),
+
+              TSortableProducts(
+                  allProducts: getBrandProducts(allProducts, brand['title']))
+            ],
+          ),
         ),
       ),
     );
   }
-}
 
+  getBrandProducts(List allProducts, brandName) {
+    Map<dynamic, dynamic> brandProducts = {};
+
+    for (var i = 0; i < allProducts.length; i++) {
+      if (allProducts[i]['brand'] == brandName) {
+        brandProducts[i] = allProducts[i];
+      }
+    }
+
+    List<dynamic> brandProductsList = brandProducts.values.toList();
+    return brandProductsList;
+  }
+}

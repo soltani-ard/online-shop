@@ -144,5 +144,9 @@ class TTexts {
   static const String allProducts = "All Products";
   static const String popularProducts = "Popular Products";
 
+  // -- Brands
+  static const String allBrands = "All Brands";
+  static const String brands = "Brands";
+
 
 }
