@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "487946386561",
+    "project_id": "online-shop-59142",
+    "storage_bucket": "online-shop-59142.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:487946386561:android:ca60a5374a3f4f44bc2180",
+        "android_client_info": {
+          "package_name": "ir.behnamsoltani.online_shop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "487946386561-549s9hsdotl3h3nk1adbdifjvi0ivb9k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ir.behnamsoltani.online_shop",
+            "certificate_hash": "6d0ba66b1bdefa37d62e23f551547dce3fda83c1"
+          }
+        },
+        {
+          "client_id": "487946386561-02kddurtl7q3kc9gje23gssd711auk5v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwo-ue46dHtRnlq2-LnJEd6UlaszVT_Ng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "487946386561-02kddurtl7q3kc9gje23gssd711auk5v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
