@@ -85,6 +85,7 @@ class TImages {
 
   // --
   static const String paymentSuccess = "assets/images/animations/paying-by-card.gif";
+  static const String loading = "assets/images/animations/loading.json";
 
 
 

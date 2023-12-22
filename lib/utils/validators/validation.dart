@@ -1,16 +1,20 @@
-
 class TValidator {
-
+  static String? validateEmptyText(String? fieldName, String? value) {
+    if (value == null || value.isEmpty) {
+      return '$fieldName is required.';
+    }
+    return null;
+  }
 
   static String? validateEmail(String? value) {
-    if(value == null || value.isEmpty){
+    if (value == null || value.isEmpty) {
       return 'Email is required.';
     }
 
     // Regular expression for email validation
     final emailRegExp = RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$');
 
-    if(!emailRegExp.hasMatch(value)) {
+    if (!emailRegExp.hasMatch(value)) {
       return 'Invalid email address.';
     }
 
@@ -18,37 +22,37 @@ class TValidator {
   }
 
   static String? validatePassword(String? value) {
-    if(value == null || value.isEmpty){
+    if (value == null || value.isEmpty) {
       return 'Password is required.';
     }
     // check minimum password length
-    if(value.length < 6) {
+    if (value.length < 6) {
       return 'Password must be at least 6 characters long.';
     }
     // check for uppercase letter
-    if(!value.contains(RegExp(r'[A-Z]'))) {
+    if (!value.contains(RegExp(r'[A-Z]'))) {
       return 'Password must contain at least one uppercase letter.';
     }
     // check for number
-    if(!value.contains(RegExp(r'[0-9]'))) {
+    if (!value.contains(RegExp(r'[0-9]'))) {
       return 'Password must contain at least one number.';
     }
     // check for special character
-    if(!value.contains(RegExp(r'[!@#$%^&*(),.?"{}|<>]'))) {
+    if (!value.contains(RegExp(r'[!@#$%^&*(),.?"{}|<>]'))) {
       return 'Password must contain at least one special character.';
     }
     return null;
   }
 
-  static String? validatePhoneNumber(String? value){
-    if(value == null || value.isEmpty){
+  static String? validatePhoneNumber(String? value) {
+    if (value == null || value.isEmpty) {
       return 'Phone number is required.';
     }
 
     // Regular expression for phone number validation
     final phoneNumberRegExp = RegExp(r'^\d{10}$');
 
-    if(!phoneNumberRegExp.hasMatch(value)) {
+    if (!phoneNumberRegExp.hasMatch(value)) {
       return 'Invalid Phone number format (10 digits required).';
     }
 
