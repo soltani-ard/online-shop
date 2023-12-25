@@ -22,7 +22,7 @@ class SignupController extends GetxController {
   final hidePassword = true.obs; // show or hide password
   final privacyPolicyCheckBoxValue = true.obs; // agree with privacy policy
 
-  GlobalKey<FormState> signupFormKey = GlobalKey<FormState>();
+  final signupFormKey = GlobalKey<FormState>();
 
   /// signup
   void signup() async {
@@ -39,7 +39,7 @@ class SignupController extends GetxController {
       }
 
       // form validation
-      if (signupFormKey.currentState!.validate()) {
+      if (!signupFormKey.currentState!.validate()) {
         TFullScreenLoader.stopLoading();
         return;
       }
@@ -79,7 +79,9 @@ class SignupController extends GetxController {
           message: 'Your account has been created! Verify email to continue.');
 
       // move to verify email screen
-      Get.to(() => const VerifyEmailScreen());
+      Get.to(() => VerifyEmailScreen(
+            email: email.text.trim(),
+          ));
 
       // move to verify email screen
     } catch (e) {

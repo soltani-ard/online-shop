@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:online_shop/common/widgets/login_signup/form_divider.dart';
@@ -16,28 +15,37 @@ class SignUpScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: SingleChildScrollView(
-        child: Padding(padding: const EdgeInsets.all(TSizes.defaultSpace), child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
+        child: Padding(
+          padding: const EdgeInsets.all(TSizes.defaultSpace),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              /// Title
+              Text(
+                TTexts.signUpTitle,
+                style: Theme.of(context).textTheme.headlineMedium,
+              ),
+              const SizedBox(
+                height: TSizes.spaceBtwSections,
+              ),
 
-            /// Title
-            Text(TTexts.signUpTitle, style: Theme.of(context).textTheme.headlineMedium,),
-            const SizedBox(height: TSizes.spaceBtwSections,),
+              /// Form
+              const TSignUpForm(),
+              const SizedBox(
+                height: TSizes.spaceBtwItems,
+              ),
 
-            /// Form
-            const TSignUpForm(),
-            const SizedBox(height: TSizes.spaceBtwItems,),
+              /// Form Divider
+              TFormDivider(title: TTexts.orSignUpWith.capitalize.toString()),
+              const SizedBox(
+                height: TSizes.spaceBtwSections,
+              ),
 
-            /// Form Divider
-            TFormDivider(title: TTexts.orSignUpWith.capitalize.toString()),
-            const SizedBox(height: TSizes.spaceBtwSections,),
-
-            /// Social Buttons
-            const TSocialButtons(),
-
-
-          ],
-        ),),
+              /// Social Buttons
+              const TSocialButtons(),
+            ],
+          ),
+        ),
       ),
     );
   }

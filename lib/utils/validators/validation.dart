@@ -38,7 +38,7 @@ class TValidator {
       return 'Password must contain at least one number.';
     }
     // check for special character
-    if (!value.contains(RegExp(r'[!@#$%^&*(),.?"{}|<>]'))) {
+    if (!value.contains(RegExp(r'[!+=@#$%^&*(),.?"{}|<>]'))) {
       return 'Password must contain at least one special character.';
     }
     return null;
