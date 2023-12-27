@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:online_shop/data/repositories/authentication/authentication_repository.dart';
+import 'package:online_shop/features/personalization/controllers/user_controller.dart';
 import 'package:online_shop/utils/constants/image_strings.dart';
 import 'package:online_shop/utils/device/network_manager.dart';
 import 'package:online_shop/utils/popups/full_screen_loader.dart';
@@ -15,6 +16,7 @@ class LoginController extends GetxController {
   final email = TextEditingController();
   final password = TextEditingController();
   final loginFormKey = GlobalKey<FormState>();
+  final userController = Get.put(UserController());
 
   @override
   void onInit() {
@@ -52,6 +54,39 @@ class LoginController extends GetxController {
       // login user with email & password
       final userCredential = await AuthenticationRepository.instance
           .loginWithEmailAndPassword(email.text.trim(), password.text.trim());
+
+      // redirect user to home page
+      TFullScreenLoader.stopLoading();
+      AuthenticationRepository.instance.screenRedirect();
+
+      // move to verify email screen
+    } catch (e) {
+      TFullScreenLoader.stopLoading();
+      // show some generic error to user
+      TLoader.errorSnackBar(title: 'Oh Snap!', message: e.toString());
+    }
+  }
+
+  /// social login - google
+  Future<void> googleSignIn() async {
+    try {
+      // start loading
+      TFullScreenLoader.openLoadingDialog(
+          'Logging you in ...', TImages.loading);
+
+      // check internet connectivity
+      final isConnected = await NetworkManager.instance.isConnected();
+      if (!isConnected) {
+        TFullScreenLoader.stopLoading();
+        return;
+      }
+
+      // google authentication
+      final userCredentials =
+          await AuthenticationRepository.instance.signInWithGoogle();
+
+      // save user record
+      userController.saveUserRecord(userCredentials);
 
       // redirect user to home page
       TFullScreenLoader.stopLoading();
