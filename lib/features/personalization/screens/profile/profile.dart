@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:online_shop/common/widgets/appbar/appbar.dart';
 import 'package:online_shop/common/widgets/images/rounded_image.dart';
 import 'package:online_shop/common/widgets/text/section_heading.dart';
-import 'package:online_shop/features/personalization/profile/widgets/divider.dart';
-import 'package:online_shop/features/personalization/profile/widgets/profile_menu.dart';
+import 'package:online_shop/features/personalization/controllers/user_controller.dart';
+import 'package:online_shop/features/personalization/screens/profile/widgets/change_name.dart';
+import 'package:online_shop/features/personalization/screens/profile/widgets/divider.dart';
+import 'package:online_shop/features/personalization/screens/profile/widgets/profile_menu.dart';
 import 'package:online_shop/utils/constants/image_strings.dart';
 import 'package:online_shop/utils/constants/sizes.dart';
 import 'package:online_shop/utils/constants/text_strings.dart';
@@ -14,6 +17,7 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final userCtrl = UserController.instance;
     return Scaffold(
       appBar: TAppBar(
         showBackArrow: true,
@@ -51,12 +55,12 @@ class ProfileScreen extends StatelessWidget {
               ),
               TProfileMenu(
                 keyText: TTexts.name,
-                valueText: 'Behnam',
-                onTap: () {},
+                valueText: userCtrl.user.value.fullName,
+                onTap: () => Get.off(() => const ChangeName()),
               ),
               TProfileMenu(
                 keyText: TTexts.userName,
-                valueText: 'Soltani',
+                valueText: userCtrl.user.value.username,
                 onTap: () {},
               ),
 
@@ -67,18 +71,18 @@ class ProfileScreen extends StatelessWidget {
               ),
               TProfileMenu(
                 keyText: TTexts.userId,
-                valueText: '5047852',
+                valueText: userCtrl.user.value.id,
                 icon: Iconsax.copy,
                 onTap: () {},
               ),
               TProfileMenu(
                 keyText: TTexts.email,
-                valueText: 'admin@behnamsoltani.ir',
+                valueText: userCtrl.user.value.email,
                 onTap: () {},
               ),
               TProfileMenu(
                 keyText: TTexts.phoneNumber,
-                valueText: '+98-123456789',
+                valueText: userCtrl.user.value.phoneNumber,
                 onTap: () {},
               ),
               TProfileMenu(
@@ -95,7 +99,7 @@ class ProfileScreen extends StatelessWidget {
               const TAddDivider(),
               Center(
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () => userCtrl.deleteAccountWarningPopup(),
                   child: const Text(
                     TTexts.closeAccount,
                     style: TextStyle(color: Colors.red),

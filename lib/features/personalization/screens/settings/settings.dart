@@ -7,12 +7,12 @@ import 'package:online_shop/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:online_shop/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:online_shop/common/widgets/text/section_heading.dart';
 import 'package:online_shop/data/repositories/authentication/authentication_repository.dart';
-import 'package:online_shop/features/personalization/address/address.dart';
 import 'package:online_shop/features/shop/screens/cart/cart.dart';
 import 'package:online_shop/features/shop/screens/order/order.dart';
 import 'package:online_shop/utils/constants/colors.dart';
 import 'package:online_shop/utils/constants/sizes.dart';
 import 'package:online_shop/utils/constants/text_strings.dart';
+import '../address/address.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
