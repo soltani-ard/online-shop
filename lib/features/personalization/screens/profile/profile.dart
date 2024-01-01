@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:online_shop/common/widgets/appbar/appbar.dart';
 import 'package:online_shop/common/widgets/images/rounded_image.dart';
+import 'package:online_shop/common/widgets/shimmer_effect/shimmer_effect.dart';
 import 'package:online_shop/common/widgets/text/section_heading.dart';
 import 'package:online_shop/features/personalization/controllers/user_controller.dart';
 import 'package:online_shop/features/personalization/screens/profile/widgets/change_name.dart';
@@ -35,13 +36,26 @@ class ProfileScreen extends StatelessWidget {
                 width: double.infinity,
                 child: Column(
                   children: [
-                    const TRoundedImage(
-                      imgUrl: TImages.user,
-                      width: 150,
-                      height: 150,
-                    ),
+                    Obx(() {
+                      final networkImage = userCtrl.user.value.profilePicture;
+                      final image =
+                          networkImage.isNotEmpty ? networkImage : TImages.user;
+                      return userCtrl.imageUploading.value
+                          ? const TShimmerEffect(
+                              width: 80,
+                              height: 80,
+                              radius: 80,
+                            )
+                          : TRoundedImage(
+                              isNetworkImage: networkImage.isNotEmpty,
+                              imgUrl: image,
+                              width: 80,
+                              height: 80,
+                              borderRadius: 100,
+                            );
+                    }),
                     TextButton(
-                        onPressed: () {},
+                        onPressed: () => userCtrl.uploadUserProfilePicture(),
                         child: const Text(TTexts.changeProfilePicture))
                   ],
                 ),

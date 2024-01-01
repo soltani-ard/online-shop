@@ -1,5 +1,7 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:online_shop/common/widgets/shimmer_effect/shimmer_effect.dart';
 import 'package:online_shop/utils/constants/colors.dart';
 import 'package:online_shop/utils/constants/sizes.dart';
 import 'package:online_shop/utils/helpers/helper_functions.dart';
@@ -56,18 +58,31 @@ class TRoundedImage extends StatelessWidget {
                       alignment: Alignment.center,
                       width: 56,
                       height: 56,
-                      colorFilter:
-                      ColorFilter.mode(isDark ? Colors.white : Colors.black, BlendMode.srcIn),
+                      colorFilter: ColorFilter.mode(
+                          isDark ? Colors.white : Colors.black,
+                          BlendMode.srcIn),
                     )
-                  : Image(
-                      fit: fit,
-                      width: width,
-                      height: height,
-                      alignment: Alignment.center,
-                      image: isNetworkImage
-                          ? NetworkImage(imgUrl)
-                          : AssetImage(imgUrl) as ImageProvider,
-                    ),
+                  : isNetworkImage
+                      ? CachedNetworkImage(
+                          imageUrl: imgUrl,
+                          fit: fit,
+                          progressIndicatorBuilder:
+                              (context, url, downloadProgress) =>
+                                  const TShimmerEffect(
+                            width: 55,
+                            height: 55,
+                            radius: 55,
+                          ),
+                          errorWidget: (context, url, error) =>
+                              const Icon(Icons.error),
+                        )
+                      : Image(
+                          fit: fit,
+                          width: width,
+                          height: height,
+                          alignment: Alignment.center,
+                          image: AssetImage(imgUrl),
+                        ),
             )),
       ),
     );

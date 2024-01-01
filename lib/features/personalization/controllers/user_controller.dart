@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:online_shop/data/repositories/authentication/authentication_repository.dart';
 import 'package:online_shop/data/repositories/user/user_repository.dart';
 import 'package:online_shop/features/authentication/models/user_model.dart';
@@ -17,6 +18,7 @@ class UserController extends GetxController {
 
   /// variables
   final profileLoading = false.obs;
+  final imageUploading = false.obs;
   final verifyEmail = TextEditingController();
   final verifyPassword = TextEditingController();
   final hidePassword = false.obs;
@@ -34,26 +36,32 @@ class UserController extends GetxController {
   /// save user record from any registration provider
   Future<void> saveUserRecord(UserCredential? userCredential) async {
     try {
-      if (userCredential != null) {
-        // convert name to first and last name
-        final nameParts =
-            UserModel.nameParts(userCredential.user!.displayName ?? '');
-        final username =
-            UserModel.generateUsername(userCredential.user!.displayName ?? '');
+      // refresh user record
+      await fetchUserRecord();
 
-        // map data
-        final user = UserModel(
-            id: userCredential.user!.uid,
-            username: username,
-            email: userCredential.user!.email ?? '',
-            firstName: nameParts[0],
-            lastName:
-                nameParts.length > 1 ? nameParts.sublist(1).join(' ') : '',
-            phoneNumber: userCredential.user!.phoneNumber ?? '',
-            profilePicture: userCredential.user!.photoURL ?? '');
+      // if no record already stored
+      if (user.value.id.isEmpty) {
+        if (userCredential != null) {
+          // convert name to first and last name
+          final nameParts =
+              UserModel.nameParts(userCredential.user!.displayName ?? '');
+          final username = UserModel.generateUsername(
+              userCredential.user!.displayName ?? '');
 
-        // save user data
-        await UserRepository.instance.saveUserRecord(user);
+          // map data
+          final user = UserModel(
+              id: userCredential.user!.uid,
+              username: username,
+              email: userCredential.user!.email ?? '',
+              firstName: nameParts[0],
+              lastName:
+                  nameParts.length > 1 ? nameParts.sublist(1).join(' ') : '',
+              phoneNumber: userCredential.user!.phoneNumber ?? '',
+              profilePicture: userCredential.user!.photoURL ?? '');
+
+          // save user data
+          await UserRepository.instance.saveUserRecord(user);
+        }
       }
     } catch (e) {
       TLoader.warningSnackBar(
@@ -155,6 +163,39 @@ class UserController extends GetxController {
       TFullScreenLoader.stopLoading();
       // show some generic error to user
       TLoader.errorSnackBar(title: 'Oh Snap!', message: e.toString());
+    }
+  }
+
+  uploadUserProfilePicture() async {
+    try {
+      final image = await ImagePicker().pickImage(
+          source: ImageSource.gallery,
+          imageQuality: 70,
+          maxHeight: 512,
+          maxWidth: 512);
+      if (image != null) {
+        imageUploading.value = true;
+
+        // upload image
+        final imageUrl = await UserRepository.instance
+            .uploadImage('Users/Images/Profile/', image);
+
+        // update user image record
+        Map<String, dynamic> json = {'profilePicture': imageUrl};
+        await userRepository.updateSingleField(json);
+
+        user.value.profilePicture = imageUrl;
+        user.refresh();
+
+        TLoader.successSnackBar(
+            title: 'Congratulations!',
+            message: 'Your Profile Image has been updated.');
+      }
+    } catch (e) {
+      // show some generic error to user
+      TLoader.errorSnackBar(title: 'Oh Snap!', message: e.toString());
+    } finally {
+      imageUploading.value = false;
     }
   }
 }
