@@ -92,39 +92,7 @@ class HomePageScreen extends StatelessWidget {
                     ),
 
                     /// -- Categories
-                    THomeCategories(
-                      tmp: [
-                        {
-                          'image':
-                              "assets/icons/categories/icons8-sport-64.png",
-                          'title': "Sport"
-                        },
-                        {
-                          'image':
-                              "assets/icons/categories/icons8-jersey-64.png",
-                          'title': "T-Shirt"
-                        },
-                        {
-                          'image':
-                              "assets/icons/categories/icons8-shoes-64.png",
-                          'title': "Shoes"
-                        },
-                        {
-                          'image': "assets/icons/categories/icons8-toy-64.png",
-                          'title': "Toy"
-                        },
-                        {
-                          'image':
-                              "assets/icons/categories/icons8-jewel-64.png",
-                          'title': "Jewel"
-                        },
-                        {
-                          'image':
-                              "assets/icons/categories/icons8-cosmetics-64.png",
-                          'title': "Cosmetics"
-                        },
-                      ],
-                    ),
+                    THomeCategories(),
                   ],
                 ),
               ),

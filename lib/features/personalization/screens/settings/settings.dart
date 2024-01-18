@@ -7,6 +7,8 @@ import 'package:online_shop/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:online_shop/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:online_shop/common/widgets/text/section_heading.dart';
 import 'package:online_shop/data/repositories/authentication/authentication_repository.dart';
+import 'package:online_shop/data/repositories/categories/category_repository.dart';
+import 'package:online_shop/dummy_data.dart';
 import 'package:online_shop/features/shop/screens/cart/cart.dart';
 import 'package:online_shop/features/shop/screens/order/order.dart';
 import 'package:online_shop/utils/constants/colors.dart';
@@ -19,6 +21,7 @@ class SettingsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final categoryRepo = Get.put(CategoryRepository());
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -111,7 +114,7 @@ class SettingsScreen extends StatelessWidget {
                       icon: Iconsax.document_upload,
                       title: TTexts.loadData,
                       subTitle: TTexts.loadDataSubTitle,
-                      onTap: () {}),
+                      onTap: () => categoryRepo.uploadDummyData(TDummyData.categories)),
                   TSettingsMenuTiles(
                       icon: Iconsax.location,
                       title: TTexts.geolocation,

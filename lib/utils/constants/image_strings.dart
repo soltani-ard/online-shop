@@ -20,14 +20,14 @@ class TImages {
   static const String resetPassword = "assets/images/animations/sammy-password.png";
 
   // -- Categories
-  static const String sportIcon = "assets/icons/categories/icons8-sport-64.png";
-  static const String jerseyIcon = "assets/icons/categories/icons8-jersey-64.png";
-  static const String toyIcon = "assets/icons/categories/icons8-toy-64.png";
-  static const String shoesIcon = "assets/icons/categories/icons8-shoes-64.png";
-  static const String jewelIcon = "assets/icons/categories/icons8-jewel-64.png";
-  static const String furnitureIcon = "assets/icons/categories/icons8-furniture-64.png";
-  static const String animalIcon = "assets/icons/categories/icons8-cute-frog-64.png";
-  static const String cosmeticsIcon = "assets/icons/categories/icons8-cosmetics-64.png";
+  static const String sportIcon = "assets/icons/categories/Sports.png";
+  static const String jerseyIcon = "assets/icons/categories/Clothes.png";
+  static const String toyIcon = "assets/icons/categories/Electronics.png";
+  static const String shoesIcon = "assets/icons/categories/Shoes.png";
+  static const String jewelIcon = "assets/icons/categories/Jewelery.png";
+  static const String furnitureIcon = "assets/icons/categories/Furniture.png";
+  static const String animalIcon = "assets/icons/categories/Animals.png";
+  static const String cosmeticsIcon = "assets/icons/categories/Cosmetics.png";
 
   // -- Banners
   static const String banner_1 = "assets/images/banners/banner_1.jpg";
