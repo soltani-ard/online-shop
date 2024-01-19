@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:online_shop/common/widgets/image_text/vertical_image_text.dart';
 import 'package:online_shop/common/widgets/shimmer_effect/category_shimmer.dart';
-import 'package:online_shop/common/widgets/shimmer_effect/shimmer_effect.dart';
 import 'package:online_shop/features/shop/controllers/category_controller.dart';
 import 'package:online_shop/features/shop/screens/sub_category/sub_categories.dart';
 

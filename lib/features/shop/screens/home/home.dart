@@ -105,13 +105,7 @@ class HomePageScreen extends StatelessWidget {
           /// -- Body
           const Padding(
             padding: EdgeInsets.all(TSizes.defaultSpace),
-            child: TPromoSlider(banners: [
-              TImages.banner_3,
-              TImages.banner_2,
-              TImages.banner_1,
-              TImages.banner_4,
-              TImages.banner_5,
-            ]),
+            child: TPromoSlider(),
           ),
 
           TSectionHeading(

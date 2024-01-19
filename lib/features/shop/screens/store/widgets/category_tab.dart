@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:online_shop/common/widgets/brands/brand_show_case.dart';
-import 'package:online_shop/common/widgets/layouts/grid_layout.dart';
-import 'package:online_shop/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:online_shop/common/widgets/text/section_heading.dart';
 import 'package:online_shop/features/shop/models/category_model.dart';
 import 'package:online_shop/utils/constants/sizes.dart';
